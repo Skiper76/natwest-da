@@ -98,18 +98,18 @@
   color: var(--nw-purple, #3c1053);
 }
 
-.columns-feature.columns-feature-1-cols p:not(.button-container) {
+.columns-feature.columns-feature-1-cols p:not(.button-wrapper) {
   margin: 0 0 28px;
   max-width: 640px;
   color: var(--nw-grey-text, #646068);
   font-size: 17px;
 }
 
-.columns-feature.columns-feature-1-cols p.button-container {
+.columns-feature.columns-feature-1-cols p.button-wrapper {
   margin: 0;
 }
 
-.columns-feature.columns-feature-1-cols p.button-container + p.button-container {
+.columns-feature.columns-feature-1-cols p.button-wrapper + p.button-wrapper {
   margin-top: 12px;
 }
 
@@ -119,11 +119,11 @@
   }
 
   /* Put the two CTAs side by side on desktop */
-  .columns-feature.columns-feature-1-cols p.button-container {
+  .columns-feature.columns-feature-1-cols p.button-wrapper {
     display: inline-block;
   }
 
-  .columns-feature.columns-feature-1-cols p.button-container + p.button-container {
+  .columns-feature.columns-feature-1-cols p.button-wrapper + p.button-wrapper {
     margin-top: 0;
     margin-left: 16px;
   }

@@ -277,7 +277,7 @@ header nav .nav-tools {
 
 /* Neutralize EDS button-pill styling on top-level nav links (decorateButtons
    turns single links into a.button — nav items should be plain text links). */
-header nav .nav-sections .button-container {
+header nav .nav-sections .button-wrapper {
   margin: 0;
 }
 

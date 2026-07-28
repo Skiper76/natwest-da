@@ -161,10 +161,8 @@ function decorateButtons(main) {
       if (new URL(a.href).href === new URL(text, window.location).href) return;
     } catch { /* continue */ }
 
-    // require authored formatting for buttonization
     const strong = a.closest('strong');
     const em = a.closest('em');
-    if (!strong && !em) return;
 
     p.className = 'button-wrapper';
     a.className = 'button';
@@ -175,10 +173,12 @@ function decorateButtons(main) {
     } else if (strong) {
       a.classList.add('primary');
       strong.replaceWith(a);
-    } else {
+    } else if (em) {
       a.classList.add('secondary');
       em.replaceWith(a);
     }
+    // bare, standalone link with no authored emphasis: stays plain `button` (default
+    // solid style); a group of several is told apart purely via CSS (see styles.css).
   });
 }
 

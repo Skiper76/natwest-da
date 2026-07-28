@@ -53,6 +53,6 @@
 
 /* Push the trailing CTA/link to the bottom for even card heights */
 .cards-account .cards-account-card-body > p:last-child .button,
-.cards-account .cards-account-card-body > p.button-container:last-child {
+.cards-account .cards-account-card-body > p.button-wrapper:last-child {
   margin-top: auto;
 }

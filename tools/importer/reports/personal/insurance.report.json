@@ -1,0 +1,22 @@
+{
+  "status": "success",
+  "url": "https://personal.natwest.com/personal/insurance.html",
+  "path": "personal/insurance",
+  "timestamp": "2026-07-16T14:57:14.818Z",
+  "title": "Home Insurance | Buildings and Contents Insurance | NatWest",
+  "template": "product-overview",
+  "blocks": [
+    "hero-purple",
+    "hero-purple",
+    "cards-icon",
+    "cards-icon",
+    "cards-icon",
+    "cards-cover",
+    "cards-cover",
+    "tabs-tracker",
+    "columns-feature",
+    "columns-feature",
+    "accordion-legal",
+    "accordion-legal"
+  ]
+}

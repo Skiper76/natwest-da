@@ -1,0 +1,40 @@
+{
+  "variantName": "cards-account",
+  "baseBlock": "cards",
+  "version": "1.0.0",
+  "created": "2026-07-16T14:38:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.natwest.com/premier-banking.html",
+    "originPage": "NatWest Premier Banking segment landing page",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "minimal",
+    "purpose": "product",
+    "imagePattern": "noimg"
+  },
+  "contentPattern": {
+    "structure": "product name + tagline + price + benefit bullets + small print + CTA (no image)",
+    "buttonCount": 1,
+    "imageCount": 0
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "text-only product/account comparison cards side by side",
+      "pricing/plan tiles with a heading, price, bullet benefits and a CTA",
+      "bordered white cards on a light background with no photo or icon"
+    ],
+    "notSuitableFor": [
+      "photo-led editorial/product cards (use cards-cover)",
+      "icon-led feature/category tiles (use cards-icon)",
+      "single-item highlights"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/premier-banking"],
+    "reuseCount": 1,
+    "lastUsed": "2026-07-16T14:38:00.000Z",
+    "note": "Created for the 'Our other Premier banking accounts' two-card comparison (Premier Select / Premier Reward) on the premier-banking segment-landing page."
+  }
+}

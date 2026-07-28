@@ -1,0 +1,48 @@
+{
+  "variantName": "columns-feature",
+  "baseBlock": "columns",
+  "version": "1.0.0",
+  "created": "2026-07-16T14:18:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.natwest.com/",
+    "originPage": "NatWest homepage",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "minimal",
+    "purpose": "feature",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "text column (heading + paragraph + CTA) + image column",
+    "buttonCount": 1,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "text-and-illustration promo rows",
+      "side-by-side informational sections",
+      "text-left + image-right feature blocks"
+    ],
+    "notSuitableFor": [
+      "repeating card grids",
+      "tabular data comparisons"
+    ]
+  },
+  "usage": {
+    "pagesUsing": [
+      "/index",
+      "/support-centre/contact-us",
+      "/personal/insurance",
+      "/mortgages/first-time-buyers",
+      "/premier-banking"
+    ],
+    "reuseCount": 11,
+    "lastUsed": "2026-07-16T14:38:20.774Z",
+    "note": "Reused twice on homepage (Cash ISA promo + service quality panel) and 5 times on contact-us (per-product 'useful links + FAQs' side-by-side panels + Online/Mobile banking).",
+    "insuranceNote": "Also reused on insurance product-overview (Get-a-quote QR image + rich-text 50/50 row).",
+    "firstTimeBuyersNote": "Reused 8x on first-time-buyers for the two-step apply panel, alternating singlearticle feature rows (calculator/family-backed/next-day/how-to-buy/new-build/rate-alerts), the two-column mortgage-type/benefits feature and the More-guides link-list columns.",
+    "premierNote": "Reused 2x on premier-banking segment-landing page."
+  }
+}

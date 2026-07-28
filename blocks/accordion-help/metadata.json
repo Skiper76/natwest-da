@@ -1,0 +1,45 @@
+{
+  "variantName": "accordion-help",
+  "baseBlock": "accordion",
+  "version": "1.0.0",
+  "created": "2026-07-16T14:30:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.natwest.com/support-centre/contact-us.html",
+    "originPage": "NatWest Contact Us / Support Centre",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "compact",
+    "purpose": "faq",
+    "imagePattern": "noimg"
+  },
+  "contentPattern": {
+    "structure": "collapsible title + content rows (phone numbers, opening hours, guidance)",
+    "buttonCount": 0,
+    "imageCount": 0
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "support/contact phone-number panels",
+      "FAQ and question-and-answer sections",
+      "collapsible help topics and contact-detail lists"
+    ],
+    "notSuitableFor": [
+      "always-visible content that should not toggle",
+      "media-heavy panels needing complex layout"
+    ]
+  },
+  "usage": {
+    "pagesUsing": [
+      "/support-centre/contact-us",
+      "/mortgages/first-time-buyers",
+      "/premier-banking"
+    ],
+    "reuseCount": 9,
+    "lastUsed": "2026-07-16T14:38:20.774Z",
+    "note": "Used 6 times on the contact-us page (Mortgage/Credit/Loan/Current-Savings phone numbers, Urgent help, Additional contact numbers).",
+    "firstTimeBuyersNote": "Reused on first-time-buyers for the 6-item FAQ accordion.",
+    "premierNote": "Reused 2x on premier-banking segment-landing page."
+  }
+}

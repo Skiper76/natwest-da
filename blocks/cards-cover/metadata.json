@@ -1,0 +1,44 @@
+{
+  "variantName": "cards-cover",
+  "baseBlock": "cards",
+  "version": "1.0.0",
+  "created": "2026-07-16T14:30:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://personal.natwest.com/personal/insurance.html",
+    "originPage": "NatWest Home Insurance product overview",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "minimal",
+    "purpose": "product",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "photo (top/bottom) + heading + description + whole-card link",
+    "buttonCount": 0,
+    "imageCount": 4
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "photo-led product/cover option cards",
+      "clickable editorial cards with a large image + heading + description",
+      "product-category grids where the whole card links to a detail page"
+    ],
+    "notSuitableFor": [
+      "icon-led feature cards (use cards-icon)",
+      "single-item highlights",
+      "text-only card grids"
+    ]
+  },
+  "usage": {
+    "pagesUsing": [
+      "/personal/insurance",
+      "/mortgages/first-time-buyers"
+    ],
+    "reuseCount": 2,
+    "lastUsed": "2026-07-16T14:34:00.000Z",
+    "note": "Created for the 'Cover to suit your needs' 4-card photo grid on the insurance product-overview page.",
+    "firstTimeBuyersNote": "Reused on first-time-buyers for the 3-item Other-mortgage-options product card grid (95%/cashback/green)."
+  }
+}

@@ -1,6 +1,7 @@
 /* header and nav layout */
 header .nav-wrapper {
-  background-color: var(--background-color);
+  background-color: var(--nw-purple);
+  color: #fff;
   width: 100%;
   z-index: 2;
   position: fixed;
@@ -55,7 +56,7 @@ header nav p {
 }
 
 header nav a:any-link {
-  color: currentcolor;
+  color: #fff;
 }
 
 /* hamburger */
@@ -72,7 +73,7 @@ header nav .nav-hamburger button {
   border: 0;
   border-radius: 0;
   padding: 0;
-  background-color: var(--background-color);
+  background-color: transparent;
   color: inherit;
   overflow: initial;
   text-overflow: initial;
@@ -149,7 +150,7 @@ header .nav-brand {
 }
 
 header nav .nav-brand img {
-  width: 128px;
+  width: 140px;
   height: auto;
 }
 
@@ -174,7 +175,8 @@ header nav .nav-sections ul {
 }
 
 header nav .nav-sections ul > li {
-  font-weight: 500;
+  color: #fff;
+  font-weight: 700;
 }
 
 header nav .nav-sections ul > li > ul {
@@ -269,4 +271,83 @@ header nav .nav-sections ul > li > ul > li {
 /* tools */
 header nav .nav-tools {
   grid-area: tools;
+}
+
+/* ===== NatWest branding ===== */
+
+/* Neutralize EDS button-pill styling on top-level nav links (decorateButtons
+   turns single links into a.button — nav items should be plain text links). */
+header nav .nav-sections .button-container {
+  margin: 0;
+}
+
+header nav .nav-sections a.button:any-link {
+  display: inline;
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+  padding: 0;
+  background: none;
+  color: #fff;
+  font-size: inherit;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+header nav .nav-sections a.button:hover,
+header nav .nav-sections a.button:focus {
+  background: none;
+  text-decoration: underline;
+}
+
+/* Log in CTA in tools slot */
+header nav .nav-tools a:any-link {
+  display: inline-block;
+  margin: 0;
+  border: 2px solid #fff;
+  border-radius: 2.4em;
+  padding: 0.4em 1.4em;
+  background: none;
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+header nav .nav-tools a:hover,
+header nav .nav-tools a:focus {
+  background-color: #fff;
+  color: var(--nw-purple);
+}
+
+@media (width >= 900px) {
+  /* dropdown panels: white surface with purple text */
+  header nav .nav-sections .default-content-wrapper > ul > li[aria-expanded='true'] > ul {
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 6px 18px rgb(60 16 83 / 18%);
+    width: 240px;
+  }
+
+  header nav .nav-sections .default-content-wrapper > ul > li > ul::before {
+    border-bottom-color: #fff;
+  }
+
+  header nav .nav-sections .default-content-wrapper > ul > li[aria-expanded='true'] > ul a:any-link {
+    color: var(--nw-purple);
+    font-weight: 400;
+  }
+
+  header nav .nav-sections .default-content-wrapper > ul > li[aria-expanded='true'] > ul a:hover {
+    color: var(--nw-purple-bright);
+    text-decoration: underline;
+  }
+}
+
+/* mobile: sub-links indent, purple-on-white when expanded panel */
+@media (width < 900px) {
+  header nav[aria-expanded='true'] .nav-sections ul > li > ul > li a:any-link {
+    color: #fff;
+  }
 }

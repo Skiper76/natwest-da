@@ -1,3 +1,5 @@
+@import url('brand.css');
+
 /*
  * Copyright 2020 Adobe. All rights reserved.
  * This file is licensed to you under the Apache License, Version 2.0 (the "License");
@@ -10,65 +12,7 @@
  * governing permissions and limitations under the License.
  */
 
-:root {
-  /* colors */
-  --background-color: white;
-  --light-color: #f8f8f8;
-  --dark-color: #505050;
-  --text-color: #131313;
-  --link-color: #3b63fb;
-  --link-hover-color: #1d3ecf;
-
-  /* fonts */
-  --body-font-family: roboto, roboto-fallback, sans-serif;
-  --heading-font-family: roboto-condensed, roboto-condensed-fallback, sans-serif;
-
-  /* body sizes */
-  --body-font-size-m: 22px;
-  --body-font-size-s: 19px;
-  --body-font-size-xs: 17px;
-
-  /* heading sizes */
-  --heading-font-size-xxl: 55px;
-  --heading-font-size-xl: 44px;
-  --heading-font-size-l: 34px;
-  --heading-font-size-m: 27px;
-  --heading-font-size-s: 24px;
-  --heading-font-size-xs: 22px;
-
-  /* nav height */
-  --nav-height: 64px;
-}
-
-/* fallback fonts */
-@font-face {
-  font-family: roboto-condensed-fallback;
-  size-adjust: 88.82%;
-  src: local('Arial');
-}
-
-@font-face {
-  font-family: roboto-fallback;
-  size-adjust: 99.529%;
-  src: local('Arial');
-}
-
-@media (width >= 900px) {
-  :root {
-    /* body sizes */
-    --body-font-size-m: 18px;
-    --body-font-size-s: 16px;
-    --body-font-size-xs: 14px;
-
-    /* heading sizes */
-    --heading-font-size-xxl: 45px;
-    --heading-font-size-xl: 36px;
-    --heading-font-size-l: 28px;
-    --heading-font-size-m: 22px;
-    --heading-font-size-s: 20px;
-    --heading-font-size-xs: 18px;
-  }
-}
+/* Design tokens (colors, fonts, sizes, spacing) live in brand.css */
 
 body {
   display: none;
@@ -106,6 +50,7 @@ h5,
 h6 {
   margin-top: 0.8em;
   margin-bottom: 0.25em;
+  color: var(--heading-color);
   font-family: var(--heading-font-family);
   font-weight: 600;
   line-height: 1.25;
@@ -301,7 +246,7 @@ main > .section {
 }
 
 main > .section > div {
-  max-width: 1200px;
+  max-width: var(--content-max-width);
   margin: auto;
   padding: 0 24px;
 }
@@ -322,4 +267,71 @@ main .section.highlight {
   background-color: var(--light-color);
   margin: 0;
   padding: 40px 0;
+}
+
+main .section.purple-tint {
+  background-color: var(--nw-purple-tint);
+  margin: 0;
+  padding: 40px 0;
+}
+
+/* purple-tint: primary CTA uses deep purple for contrast on tinted background */
+main .section.purple-tint a.button.primary,
+main .section.purple-tint button.button.primary {
+  border-color: var(--nw-purple);
+  background-color: var(--nw-purple);
+}
+
+main .section.purple-tint a.button.primary:hover,
+main .section.purple-tint a.button.primary:focus-visible,
+main .section.purple-tint button.button.primary:hover,
+main .section.purple-tint button.button.primary:focus-visible {
+  border-color: var(--nw-purple-mid);
+  background-color: var(--nw-purple-mid);
+  color: var(--background-color);
+}
+
+/* purple-tint: secondary CTA becomes a plain underlined text link */
+main .section.purple-tint a.button.secondary,
+main .section.purple-tint button.button.secondary {
+  display: inline;
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  margin: 4px 0;
+  color: var(--nw-purple-bright);
+  text-decoration: underline;
+  font-weight: 400;
+  white-space: normal;
+}
+
+main .section.purple-tint a.button.secondary:hover,
+main .section.purple-tint a.button.secondary:focus-visible,
+main .section.purple-tint button.button.secondary:hover,
+main .section.purple-tint button.button.secondary:focus-visible {
+  background-color: transparent;
+  border-color: transparent;
+  color: var(--nw-purple);
+}
+
+main .section.dark {
+  background-color: var(--nw-purple);
+  color: #fff;
+  margin: 0;
+  padding: 40px 0;
+}
+
+main .section.dark h1,
+main .section.dark h2,
+main .section.dark h3,
+main .section.dark h4,
+main .section.dark h5,
+main .section.dark h6 {
+  color: #fff;
+}
+
+main .section.dark a:any-link {
+  color: #fff;
+  text-decoration: underline;
 }

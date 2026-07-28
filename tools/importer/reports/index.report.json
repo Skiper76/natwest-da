@@ -1,0 +1,26 @@
+{
+  "status": "success",
+  "url": "https://www.natwest.com/",
+  "path": "index",
+  "timestamp": "2026-07-16T14:57:01.592Z",
+  "title": "NatWest Online – Bank Accounts, Mortgages, Loans and Savings",
+  "template": "homepage",
+  "blocks": [
+    "hero-purple",
+    "hero-purple",
+    "cards-icon",
+    "columns-feature",
+    "columns-feature",
+    "columns-feature",
+    "columns-feature",
+    "columns-feature",
+    "columns-feature",
+    "columns-feature",
+    "columns-feature",
+    "columns-feature",
+    "columns-feature",
+    "columns-feature",
+    "carousel-cards",
+    "carousel-cards"
+  ]
+}

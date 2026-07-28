@@ -1,0 +1,46 @@
+{
+  "variantName": "cards-icon",
+  "baseBlock": "cards",
+  "version": "1.0.0",
+  "created": "2026-07-16T14:18:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.natwest.com/",
+    "originPage": "NatWest homepage",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "minimal",
+    "purpose": "feature",
+    "imagePattern": "icon"
+  },
+  "contentPattern": {
+    "structure": "icon + heading + link list",
+    "buttonCount": 0,
+    "imageCount": 4
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "product/service category navigation grids",
+      "icon-led feature cards with a list of links",
+      "no-photo category tiles on a light background"
+    ],
+    "notSuitableFor": [
+      "photo-led editorial cards",
+      "single-item highlights"
+    ]
+  },
+  "usage": {
+    "pagesUsing": [
+      "/index",
+      "/support-centre/contact-us",
+      "/personal/insurance",
+      "/premier-banking"
+    ],
+    "reuseCount": 6,
+    "lastUsed": "2026-07-16T14:38:20.774Z",
+    "note": "Reused on contact-us for the 'Need help with one of our products?' icon task grid.",
+    "insuranceNote": "Also reused on insurance product-overview twice (Choose-insurance quick-action tiles + Why-choose feature grid).",
+    "premierNote": "Reused 3x on premier-banking segment-landing page."
+  }
+}

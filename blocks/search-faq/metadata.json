@@ -1,0 +1,38 @@
+{
+  "variantName": "search-faq",
+  "baseBlock": "search",
+  "version": "1.0.0",
+  "created": "2026-07-16T14:30:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.natwest.com/support-centre/contact-us.html",
+    "originPage": "NatWest Contact Us / Support Centre",
+    "blockPosition": "top"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "minimal",
+    "purpose": "faq",
+    "imagePattern": "noimg"
+  },
+  "contentPattern": {
+    "structure": "search input backed by a query-index URL, rendering matching FAQ result cards",
+    "buttonCount": 0,
+    "imageCount": 0
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "FAQ / knowledge-base search fields",
+      "support-centre content search",
+      "site content lookup by keyword"
+    ],
+    "notSuitableFor": [
+      "filtered navigation without full-text search",
+      "single-page sites where search is unnecessary"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/support-centre/contact-us"],
+    "reuseCount": 1,
+    "lastUsed": "2026-07-16T14:30:00.000Z"
+  }
+}

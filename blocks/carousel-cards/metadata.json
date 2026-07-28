@@ -1,0 +1,39 @@
+{
+  "variantName": "carousel-cards",
+  "baseBlock": "carousel",
+  "version": "1.0.0",
+  "created": "2026-07-16T14:18:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.natwest.com/",
+    "originPage": "NatWest homepage",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "minimal",
+    "purpose": "feature",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "slides of image (top) + heading + description + CTA link; multiple cards visible per view with prev/next arrows and dots",
+    "buttonCount": 1,
+    "imageCount": 3
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "app-feature and editorial card carousels",
+      "multi-card swipeable galleries with image-on-top cards",
+      "'more from' / 'explore' promotional card rows"
+    ],
+    "notSuitableFor": [
+      "full-bleed image-overlay hero carousels",
+      "single-slide banners"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/index"],
+    "reuseCount": 2,
+    "lastUsed": "2026-07-16T14:18:00.000Z",
+    "note": "Reused twice on homepage (Mobile App carousel + More from NatWest carousel)."
+  }
+}

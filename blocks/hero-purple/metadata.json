@@ -1,0 +1,48 @@
+{
+  "variantName": "hero-purple",
+  "baseBlock": "hero",
+  "version": "1.0.0",
+  "created": "2026-07-16T14:18:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.natwest.com/",
+    "originPage": "NatWest homepage",
+    "blockPosition": "top"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "dark",
+    "density": "minimal",
+    "purpose": "hero",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "heading + paragraph + CTA + image",
+    "buttonCount": 1,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "homepage marketing banners",
+      "brand-purple promotional heroes with a right-side illustration",
+      "product/offer intro banners"
+    ],
+    "notSuitableFor": [
+      "light-background text-only heroes",
+      "full-bleed background-photo heroes"
+    ]
+  },
+  "usage": {
+    "pagesUsing": [
+      "/index",
+      "/support-centre/contact-us",
+      "/personal/insurance",
+      "/mortgages/first-time-buyers",
+      "/premier-banking"
+    ],
+    "reuseCount": 11,
+    "lastUsed": "2026-07-16T14:38:20.774Z",
+    "note": "Reused on contact-us for the intro hero and 5 purple product-group header bands (text-only via .no-image).",
+    "insuranceNote": "Also reused for the insurance product-overview hero (purple banner + right-side lifestyle photo).",
+    "firstTimeBuyersNote": "Reused for the first-time-buyers product-detail hero (purple banner + right-side lifestyle photo).",
+    "premierNote": "Reused 2x on premier-banking segment-landing page."
+  }
+}

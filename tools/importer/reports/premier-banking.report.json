@@ -1,0 +1,28 @@
+{
+  "status": "success",
+  "url": "https://www.natwest.com/premier-banking.html",
+  "path": "premier-banking",
+  "timestamp": "2026-07-16T14:57:29.879Z",
+  "title": "Premier banking | NatWest",
+  "template": "segment-landing",
+  "blocks": [
+    "hero-purple",
+    "hero-purple",
+    "cards-icon",
+    "cards-icon",
+    "cards-icon",
+    "cards-icon",
+    "cards-icon",
+    "cards-icon",
+    "cards-account",
+    "cards-account",
+    "cards-account",
+    "columns-feature",
+    "columns-feature",
+    "columns-feature",
+    "columns-feature",
+    "accordion-help",
+    "accordion-help",
+    "accordion-help"
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "variantName": "accordion-legal",
+  "baseBlock": "accordion",
+  "version": "1.0.0",
+  "created": "2026-07-16T14:30:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://personal.natwest.com/personal/insurance.html",
+    "originPage": "NatWest Home Insurance product overview",
+    "blockPosition": "bottom"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "grey",
+    "density": "minimal",
+    "purpose": "faq",
+    "imagePattern": "noimg"
+  },
+  "contentPattern": {
+    "structure": "title + expandable body text per row",
+    "buttonCount": 0,
+    "imageCount": 0
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "legal / terms & conditions disclosure sections",
+      "FAQ-style collapsible content on a grey band",
+      "compact expandable text-only panels at the bottom of a page"
+    ],
+    "notSuitableFor": [
+      "tabbed feature switchers with media (use tabs-tracker)",
+      "content that must always be visible"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/personal/insurance"],
+    "reuseCount": 1,
+    "lastUsed": "2026-07-16T14:30:00.000Z",
+    "note": "Created for the 'The legal stuff' accordion (2 items) on the insurance product-overview page."
+  }
+}

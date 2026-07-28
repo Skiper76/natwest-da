@@ -50,6 +50,26 @@ async function loadFonts() {
 }
 
 /**
+ * Builds hero block and prepends to main in a new section.
+ * @param {Element} main The container element
+ */
+function buildHeroBlock(main) {
+  const h1 = main.querySelector('h1');
+  const picture = main.querySelector('picture');
+  // eslint-disable-next-line no-bitwise
+  if (h1 && picture && (h1.compareDocumentPosition(picture) & Node.DOCUMENT_POSITION_PRECEDING)) {
+    // Check if h1 or picture is already inside a hero block (including authored hero variants)
+    if (h1.closest('[class^="hero"]') || h1.closest('[class*=" hero"]')
+      || picture.closest('[class^="hero"]') || picture.closest('[class*=" hero"]')) {
+      return; // Don't create a duplicate hero block
+    }
+    const section = document.createElement('div');
+    section.append(buildBlock('hero', { elems: [picture, h1] }));
+    main.prepend(section);
+  }
+}
+
+/**
  * Turns `/widgets/...` links into widget blocks.
  * @param {Element} main The container element
  */
@@ -96,11 +116,31 @@ function buildAutoBlocks(main) {
         });
       });
     }
+    buildHeroBlock(main);
     buildWidgetAutoBlocks(main);
   } catch (error) {
     // eslint-disable-next-line no-console
     console.error('Auto Blocking failed', error);
   }
+}
+
+/**
+ * Cleans up link labels that carry a trailing "Open in new window" phrase
+ * (inherited from the source site's visually-hidden accessibility text).
+ * Moves the intent to target/rel/aria-label instead of showing it as text.
+ * @param {Element} main The main element
+ */
+function cleanupExternalLinkLabels(main) {
+  main.querySelectorAll('a').forEach((a) => {
+    const suffix = /\s*Open in new window\s*$/i;
+    if (suffix.test(a.textContent)) {
+      const label = a.textContent.replace(suffix, '').trim();
+      a.textContent = label;
+      a.setAttribute('target', '_blank');
+      a.setAttribute('rel', 'noopener noreferrer');
+      a.setAttribute('aria-label', `${label} (opens in a new window)`);
+    }
+  });
 }
 
 /**
@@ -148,6 +188,7 @@ function decorateButtons(main) {
  */
 // eslint-disable-next-line import/prefer-default-export
 export function decorateMain(main) {
+  cleanupExternalLinkLabels(main);
   decorateIcons(main);
   buildAutoBlocks(main);
   decorateSections(main);

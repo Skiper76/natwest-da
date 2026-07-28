@@ -1,0 +1,39 @@
+{
+  "variantName": "tabs-tracker",
+  "baseBlock": "tabs",
+  "version": "1.0.0",
+  "created": "2026-07-16T14:30:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://personal.natwest.com/personal/insurance.html",
+    "originPage": "NatWest Home Insurance product overview",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "purple",
+    "density": "minimal",
+    "purpose": "feature",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "tab label + tab panel (app screenshot image + description) per row",
+    "buttonCount": 0,
+    "imageCount": 3
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "selector/tab feature panels that switch between related content",
+      "app-feature showcases where each tab reveals a screenshot + description",
+      "product feature switchers on a brand-colour band"
+    ],
+    "notSuitableFor": [
+      "collapsible FAQ/legal content (use accordion)",
+      "single-panel content that needs no switching"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/personal/insurance"],
+    "reuseCount": 1,
+    "lastUsed": "2026-07-16T14:30:00.000Z",
+    "note": "Created for the Insurance Tracker selector-tab panel (Price / Renewal / Weather alerts)."
+  }
+}

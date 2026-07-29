@@ -99,26 +99,43 @@
   font-size: 17px;
 }
 
-.columns-feature.columns-feature-1-cols p.button-container {
-  display: inline-block;
+/* Mobile: CTAs stack, left-aligned, full spacing between them */
+.columns-feature.columns-feature-1-cols p.button-container,
+.columns-feature.columns-feature-1-cols p.button-wrapper {
   margin: 0;
 }
 
-/* Keep the CTAs side by side, wrapping only when there isn't room */
-.columns-feature.columns-feature-1-cols p.button-container + p.button-container {
-  margin-top: 0;
-  margin-left: 16px;
+.columns-feature.columns-feature-1-cols p.button-container + p.button-container,
+.columns-feature.columns-feature-1-cols p.button-wrapper + p.button-wrapper {
+  margin-top: 12px;
 }
 
-/* CTAs: outlined buttons that fill purple on hover/focus */
-.columns-feature.columns-feature-1-cols p.button-container a.button:any-link {
+/* Tablet/desktop: CTAs sit side by side */
+@media (width >= 600px) {
+  .columns-feature.columns-feature-1-cols p.button-container,
+  .columns-feature.columns-feature-1-cols p.button-wrapper {
+    display: inline-block;
+  }
+
+  .columns-feature.columns-feature-1-cols p.button-container + p.button-container,
+  .columns-feature.columns-feature-1-cols p.button-wrapper + p.button-wrapper {
+    margin-top: 0;
+    margin-left: 16px;
+  }
+}
+
+/* Secondary CTA (any button after the first): outlined, fills purple on hover/focus */
+.columns-feature.columns-feature-1-cols p.button-container ~ p.button-container a.button:any-link,
+.columns-feature.columns-feature-1-cols p.button-wrapper ~ p.button-wrapper a.button:any-link {
   background-color: transparent;
   border-color: var(--nw-purple-bright, #5e10b1);
   color: var(--nw-purple-bright, #5e10b1);
 }
 
-.columns-feature.columns-feature-1-cols p.button-container a.button:hover,
-.columns-feature.columns-feature-1-cols p.button-container a.button:focus {
+.columns-feature.columns-feature-1-cols p.button-container ~ p.button-container a.button:hover,
+.columns-feature.columns-feature-1-cols p.button-container ~ p.button-container a.button:focus,
+.columns-feature.columns-feature-1-cols p.button-wrapper ~ p.button-wrapper a.button:hover,
+.columns-feature.columns-feature-1-cols p.button-wrapper ~ p.button-wrapper a.button:focus {
   background-color: var(--nw-purple-bright, #5e10b1);
   border-color: var(--nw-purple-bright, #5e10b1);
   color: #fff;

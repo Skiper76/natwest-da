@@ -68,7 +68,7 @@ function bindEvents(block) {
     entries.forEach((entry) => {
       if (entry.isIntersecting) updateActiveSlide(entry.target);
     });
-  }, { threshold: 0.5 });
+  }, { root: block.querySelector('.carousel-cards-slides'), threshold: 0.5 });
   block.querySelectorAll('.carousel-cards-slide').forEach((slide) => {
     slideObserver.observe(slide);
   });

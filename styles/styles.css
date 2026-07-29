@@ -52,8 +52,9 @@ h6 {
   margin-bottom: 0.25em;
   color: var(--heading-color);
   font-family: var(--heading-font-family);
-  font-weight: 600;
-  line-height: 1.25;
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: -0.2px;
   scroll-margin: 40px;
 }
 
@@ -111,99 +112,66 @@ a:hover {
 }
 
 /* buttons */
-p.button-wrapper {
-  margin: 12px 0;
-}
-
 a.button:any-link,
-button.button {
+button {
   box-sizing: border-box;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  display: inline-block;
   max-width: 100%;
-  margin: 0;
+  margin: 12px 0;
   border: 2px solid var(--nw-purple-bright);
   border-radius: 2.4em;
-  padding: 0.5em 1.2em;
-  font: inherit;
-  font-weight: 500;
+  padding: 0.65em 1.6em;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 700;
   line-height: 1.25;
+  text-align: center;
   text-decoration: none;
   background-color: var(--nw-purple-bright);
   color: var(--background-color);
   cursor: pointer;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  white-space: normal;
+  overflow-wrap: break-word;
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease, transform 0.1s ease;
 }
 
 a.button:hover,
-a.button:focus-visible,
-button.button:hover,
-button.button:focus-visible {
+a.button:focus,
+button:hover,
+button:focus {
   border-color: var(--nw-purple);
   background-color: var(--nw-purple);
+  color: var(--background-color);
+  box-shadow: 0 4px 12px rgb(60 16 83 / 30%);
+  cursor: pointer;
 }
 
-a.button[aria-disabled="true"],
-button.button:disabled {
+a.button:active,
+button:active {
+  transform: translateY(1px);
+}
+
+button:disabled,
+button:disabled:hover {
   border-color: var(--light-color);
   background-color: var(--light-color);
-  color: var(--dark-color);
-  cursor: not-allowed;
-  pointer-events: none;
+  color: var(--nw-grey-text);
+  cursor: unset;
 }
 
-/* explicit primary CTA (authored with strong) — same solid look as the default button */
-a.button.primary,
-button.button.primary {
-  border-color: var(--nw-purple-bright);
-  background-color: var(--nw-purple-bright);
-  color: var(--background-color);
-}
-
-/* secondary CTA (authored with em, or the 2nd+ CTA in a default-content group) — outline */
 a.button.secondary,
-button.button.secondary {
-  border-color: var(--nw-purple-bright);
+button.secondary {
   background-color: transparent;
+  border: 2px solid var(--nw-purple-bright);
   color: var(--nw-purple-bright);
 }
 
 a.button.secondary:hover,
-a.button.secondary:focus-visible,
-button.button.secondary:hover,
-button.button.secondary:focus-visible {
+a.button.secondary:focus,
+button.secondary:hover,
+button.secondary:focus {
   background-color: var(--nw-purple-bright);
   color: var(--background-color);
-}
-
-a.button.secondary[aria-disabled="true"],
-a.button.secondary[aria-disabled="true"]:hover,
-a.button.secondary[aria-disabled="true"]:focus-visible,
-button.button.secondary:disabled,
-button.button.secondary:disabled:hover,
-button.button.secondary:disabled:focus-visible {
-  background-color: transparent;
-  border-color: var(--light-color);
-  color: var(--dark-color);
-}
-
-/* high-impact call-to-action (authored with strong + em) */
-a.button.accent,
-button.button.accent {
-  border-color: var(--nw-purple);
-  background-color: var(--nw-purple);
-  color: var(--background-color);
-}
-
-a.button.accent:hover,
-a.button.accent:focus-visible,
-button.button.accent:hover,
-button.button.accent:focus-visible {
-  border-color: var(--nw-purple-mid);
-  background-color: var(--nw-purple-mid);
 }
 
 main img {
@@ -265,33 +233,20 @@ main .section.purple-tint a.button:any-link {
 }
 
 main .section.purple-tint a.button:hover,
-main .section.purple-tint a.button:focus-visible {
+main .section.purple-tint a.button:focus {
   background-color: var(--nw-purple-mid);
   border-color: var(--nw-purple-mid);
+  box-shadow: 0 4px 12px rgb(60 16 83 / 40%);
 }
 
-/* default-content CTA groups: tighter spacing + clear primary/secondary hierarchy.
+/* default-content CTA groups: consistent spacing between stacked CTAs.
    Scoped to default-content divs (a section > div with no block class). */
-main .section > div:not([class*="-container"]) p.button-wrapper + p.button-wrapper {
+main .section > div:not([class*="-container"]) p.button-container + p.button-container {
   margin-top: 12px;
 }
 
-/* Secondary CTA: any button after the first in a group becomes an outlined button */
-main .section > div:not([class*="-container"]) p.button-wrapper ~ p.button-wrapper a.button:any-link {
-  background-color: transparent;
-  border-color: var(--nw-purple-bright);
-  color: var(--nw-purple-bright);
-}
-
-main .section > div:not([class*="-container"]) p.button-wrapper ~ p.button-wrapper a.button:hover,
-main .section > div:not([class*="-container"]) p.button-wrapper ~ p.button-wrapper a.button:focus-visible {
-  background-color: var(--nw-purple-bright);
-  border-color: var(--nw-purple-bright);
-  color: #fff;
-}
-
-/* purple-tint: secondary CTA (2nd+ in a default-content group) becomes a plain underlined text link */
-main .section.purple-tint > div:not([class*="-container"]) p.button-wrapper ~ p.button-wrapper a.button:any-link {
+/* purple-tint: secondary CTA becomes a plain underlined text link */
+main .section.purple-tint > div:not([class*="-container"]) p.button-container ~ p.button-container a.button:any-link {
   display: inline;
   background-color: transparent;
   border: none;
@@ -302,13 +257,16 @@ main .section.purple-tint > div:not([class*="-container"]) p.button-wrapper ~ p.
   text-decoration: underline;
   font-weight: 400;
   white-space: normal;
+  box-shadow: none;
 }
 
-main .section.purple-tint > div:not([class*="-container"]) p.button-wrapper ~ p.button-wrapper a.button:hover,
-main .section.purple-tint > div:not([class*="-container"]) p.button-wrapper ~ p.button-wrapper a.button:focus-visible {
+main .section.purple-tint > div:not([class*="-container"]) p.button-container ~ p.button-container a.button:hover,
+main .section.purple-tint > div:not([class*="-container"]) p.button-container ~ p.button-container a.button:focus {
   background-color: transparent;
   border-color: transparent;
   color: var(--nw-purple);
+  box-shadow: none;
+  transform: none;
 }
 
 main .section.dark {

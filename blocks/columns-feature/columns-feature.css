@@ -58,12 +58,6 @@
   padding: 40px 24px;
 }
 
-@media (width >= 900px) {
-  .columns-feature-wrapper:last-of-type .columns-feature.columns-feature-1-cols {
-    padding: 36px 40px;
-  }
-}
-
 /* First single-column variant (e.g. "Support 24/7") — panel styling + breathing room */
 .columns-feature-wrapper:not(:last-of-type):has(.columns-feature-1-cols) {
   margin-top: 52px;
@@ -79,7 +73,7 @@
 /* Subsequent 1-col blocks (e.g. "Cash ISA rules") — no panel, normal spacing */
 .columns-feature-wrapper:has(.columns-feature-1-cols) ~ .columns-feature-wrapper:not(:last-of-type):has(.columns-feature-1-cols) {
   margin-top: 48px;
-  margin-bottom: 0;
+  margin-bottom: 40px;
 }
 
 .columns-feature-wrapper:has(.columns-feature-1-cols) ~ .columns-feature-wrapper:not(:last-of-type):has(.columns-feature-1-cols) .columns-feature.columns-feature-1-cols {
@@ -98,34 +92,41 @@
   color: var(--nw-purple, #3c1053);
 }
 
-.columns-feature.columns-feature-1-cols p:not(.button-wrapper) {
+.columns-feature.columns-feature-1-cols p:not(.button-container) {
   margin: 0 0 28px;
   max-width: 640px;
   color: var(--nw-grey-text, #646068);
   font-size: 17px;
 }
 
-.columns-feature.columns-feature-1-cols p.button-wrapper {
+.columns-feature.columns-feature-1-cols p.button-container {
+  display: inline-block;
   margin: 0;
 }
 
-.columns-feature.columns-feature-1-cols p.button-wrapper + p.button-wrapper {
-  margin-top: 12px;
+/* Keep the CTAs side by side, wrapping only when there isn't room */
+.columns-feature.columns-feature-1-cols p.button-container + p.button-container {
+  margin-top: 0;
+  margin-left: 16px;
+}
+
+/* CTAs: outlined buttons that fill purple on hover/focus */
+.columns-feature.columns-feature-1-cols p.button-container a.button:any-link {
+  background-color: transparent;
+  border-color: var(--nw-purple-bright, #5e10b1);
+  color: var(--nw-purple-bright, #5e10b1);
+}
+
+.columns-feature.columns-feature-1-cols p.button-container a.button:hover,
+.columns-feature.columns-feature-1-cols p.button-container a.button:focus {
+  background-color: var(--nw-purple-bright, #5e10b1);
+  border-color: var(--nw-purple-bright, #5e10b1);
+  color: #fff;
 }
 
 @media (width >= 900px) {
   .columns-feature-wrapper:not(:last-of-type) .columns-feature.columns-feature-1-cols {
     padding: 48px 56px;
-  }
-
-  /* Put the two CTAs side by side on desktop */
-  .columns-feature.columns-feature-1-cols p.button-wrapper {
-    display: inline-block;
-  }
-
-  .columns-feature.columns-feature-1-cols p.button-wrapper + p.button-wrapper {
-    margin-top: 0;
-    margin-left: 16px;
   }
 }
 
@@ -137,4 +138,10 @@
 .columns-feature-wrapper:last-of-type .columns-feature.columns-feature-1-cols a:not(.button) {
   color: var(--nw-purple-bright, #5e10b1);
   font-weight: 600;
+}
+
+@media (width >= 900px) {
+  .columns-feature-wrapper:last-of-type .columns-feature.columns-feature-1-cols {
+    padding: 36px 40px;
+  }
 }

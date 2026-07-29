@@ -11,10 +11,12 @@
 
 .carousel-cards .carousel-cards-slides {
   display: flex;
+  align-items: flex-start;
   gap: 24px;
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
   overflow: scroll clip;
+  transition: height 0.2s ease;
 }
 
 .carousel-cards .carousel-cards-slides::-webkit-scrollbar {
@@ -70,10 +72,13 @@
 }
 
 .carousel-cards .carousel-cards-slide-indicator button {
-  width: 12px;
-  height: 12px;
+  width: 14px;
+  height: 14px;
   margin: 0;
   padding: 0;
+  border: 4px solid transparent;
+  box-sizing: content-box;
+  background-clip: padding-box;
   border-radius: 50%;
   background-color: #dadada;
   transition: background-color 0.2s;
@@ -87,6 +92,11 @@
 
 /* Show multiple cards per view on wider screens */
 @media (width >= 600px) {
+  /* Equal-height cards look intentional when several sit side by side */
+  .carousel-cards .carousel-cards-slides {
+    align-items: stretch;
+  }
+
   .carousel-cards .carousel-cards-slide {
     flex: 0 0 calc((100% - 24px) / 2);
   }

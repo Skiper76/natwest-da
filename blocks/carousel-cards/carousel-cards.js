@@ -1,3 +1,14 @@
+// When a single card shows per view, collapse the flex track to the active slide
+// so shorter slides don't leave empty space before the indicators.
+function syncTrackHeight(block, activeSlide) {
+  const track = block.querySelector('.carousel-cards-slides');
+  if (window.matchMedia('(width >= 600px)').matches) {
+    track.style.height = '';
+  } else {
+    track.style.height = `${activeSlide.offsetHeight}px`;
+  }
+}
+
 function updateActiveSlide(slide) {
   const block = slide.closest('.carousel-cards');
   const slideIndex = parseInt(slide.dataset.slideIndex, 10);
@@ -24,6 +35,8 @@ function updateActiveSlide(slide) {
       indicator.querySelector('button').setAttribute('disabled', 'true');
     }
   });
+
+  syncTrackHeight(block, slide);
 }
 
 export function showSlide(block, slideIndex = 0) {
@@ -58,6 +71,12 @@ function bindEvents(block) {
   }, { threshold: 0.5 });
   block.querySelectorAll('.carousel-cards-slide').forEach((slide) => {
     slideObserver.observe(slide);
+  });
+
+  window.addEventListener('resize', () => {
+    const activeIndex = parseInt(block.dataset.activeSlide, 10) || 0;
+    const slides = block.querySelectorAll('.carousel-cards-slide');
+    syncTrackHeight(block, slides[activeIndex]);
   });
 }
 

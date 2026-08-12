@@ -1,6 +1,5 @@
 {
-    "project": "franklin-asset-selector",
-    "host": "www.mymydomain.prod",
+    "project": "NatWest Lab",
     "plugins": [
         {
             "id": "asset-library",

@@ -1,0 +1,37 @@
+{
+  "variantName": "faq",
+  "baseBlock": "accordion",
+  "version": "1.0.0",
+  "created": "2026-08-12T00:00:00.000Z",
+  "sourceContext": {
+    "originUrl": null,
+    "originPage": "Document Authoring lab - Frequently Asked Questions page",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "compact",
+    "purpose": "faq",
+    "imagePattern": "noimg"
+  },
+  "contentPattern": {
+    "structure": "single-column table, alternating question row then answer row",
+    "buttonCount": 0,
+    "imageCount": 0
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "standalone FAQ pages authored as simple alternating question/answer rows",
+      "collapsible question-and-answer sections"
+    ],
+    "notSuitableFor": [
+      "two-column label/body accordions (use accordion-help or accordion-legal instead)"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/faq"],
+    "reuseCount": 1,
+    "lastUsed": "2026-08-12T00:00:00.000Z",
+    "note": "Created for the Document Authoring lab FAQ page."
+  }
+}

@@ -1,27 +1,24 @@
 /*
  * FAQ Block
- * Renders alternating question/answer rows as a collapsible accordion.
+ * Renders question/answer rows (question, answer) as a collapsible accordion.
  */
 
 export default function decorate(block) {
-  const rows = [...block.children];
-  block.innerHTML = '';
-  for (let i = 0; i < rows.length; i += 2) {
-    const questionRow = rows[i];
-    const answerRow = rows[i + 1];
-    if (!answerRow) break;
+  [...block.children].forEach((row) => {
+    const question = row.children[0];
+    const answer = row.children[1];
+    if (!answer) return;
 
     const summary = document.createElement('summary');
     summary.className = 'faq-item-question';
-    summary.append(...questionRow.firstElementChild.childNodes);
+    summary.append(...question.childNodes);
 
-    const body = answerRow.firstElementChild;
-    body.className = 'faq-item-answer';
+    answer.className = 'faq-item-answer';
 
     const details = document.createElement('details');
     details.className = 'faq-item';
-    details.append(summary, body);
+    details.append(summary, answer);
 
-    block.append(details);
-  }
+    row.replaceWith(details);
+  });
 }

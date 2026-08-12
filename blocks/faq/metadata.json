@@ -15,17 +15,17 @@
     "imagePattern": "noimg"
   },
   "contentPattern": {
-    "structure": "single-column table, alternating question row then answer row",
+    "structure": "two-column table, one row per item: question cell, answer cell",
     "buttonCount": 0,
     "imageCount": 0
   },
   "reuseGuidance": {
     "suitableFor": [
-      "standalone FAQ pages authored as simple alternating question/answer rows",
+      "standalone FAQ pages authored as question/answer row pairs",
       "collapsible question-and-answer sections"
     ],
     "notSuitableFor": [
-      "two-column label/body accordions (use accordion-help or accordion-legal instead)"
+      "single-column alternating rows (superseded by the two-column layout for authoring clarity)"
     ]
   },
   "usage": {
